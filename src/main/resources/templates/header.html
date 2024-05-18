@@ -1,0 +1,9 @@
+<header th:fragment="header" xmlns:sec="http://www.w3.org/1999/xhtml">
+    <a href="/" class="main_logo">Авиа</a>
+    <a href="/tickets">Доступные билеты</a>
+    <a href="/orders">Мои билеты</a>
+    <a href="/account">Баланс</a>
+    <a href="/users/logout" sec:authorize="isAuthenticated()">Выйти</a>
+    <a href="users/authorization" sec:authorize="!isAuthenticated()">Войти</a>
+    <div class="header_blocker"></div>
+</header>

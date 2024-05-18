@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/css/default_styles.css" rel="stylesheet">
+    <link href="/static/css/orders.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="/header :: header"> </div>
+<h1>Мои билеты</h1>
+<div class="orders">
+    <div th:each="order: ${orders}" class="order">
+        <div class="orderInfo">
+            <div th:text="${order.getTicket().getDestination()}"></div>
+            <p th:text="'Подробности: '+${order.getTicket().getDescription()}"></p>
+            <p th:text="'Количество: '+${order.getAmount()}"></p>
+            <p th:text="'Общая стоимость: '+${order.getAmount()*order.getTicket().getPrice() + 'rub'}" class="total"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

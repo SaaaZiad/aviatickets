@@ -1,0 +1,60 @@
+.popup_wrap{
+    margin-top: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 2vw;
+}
+.popup_wrap > a{
+    padding: 0.5vw 1.5vw;
+    margin-top: 4vw;
+    border: 3px solid black;
+    text-transform: uppercase;
+    color: black;
+    font-size: 2vw;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: white;
+}
+p {
+    font-size: 3vw;
+    text-transform: uppercase;
+}
+.circle_text > span {
+    display: inline-block;
+    margin: 0 0.2vw;
+}
+.circle_text{
+    margin-top: 10vw;
+}
+.l1 {
+    transform: translate(20px, -90px) rotate(33deg);
+}
+.l2 {
+    transform: translate(13px, -55px) rotate(25deg);
+}
+.l3 {
+    transform: translate(6px, -30px) rotate(19deg);
+}
+.l4 {
+    transform: translate(3px, -14px) rotate(8deg);
+}
+.l5 {
+    transform: translate(0px, -6px) rotate(0deg);
+}
+.l6 {
+    transform: translate(0px, -6px) rotate(0deg);
+}
+.l7 {
+    transform: translate(-3px, -14px) rotate(-8deg);
+}
+.l8 {
+    transform: translate(-6px, -30px) rotate(-19deg);
+}
+.l9 {
+    transform: translate(-13px, -55px) rotate(-25deg);
+}
+.l10 {
+    transform: translate(-20px, -90px) rotate(-33deg);
+}

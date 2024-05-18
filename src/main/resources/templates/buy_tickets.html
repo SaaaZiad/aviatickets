@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/css/default_styles.css" rel="stylesheet">
+    <link href="/static/css/form.css" rel="stylesheet">
+    <title>Купить</title>
+</head>
+<body>
+<div th:replace="/header :: header"></div>
+<form th:action="@{/tickets/buy_tickets/{id}(id=${ticketId})}"
+      th:method="post"
+      th:object="${buyDTO}"
+      class="form_main">
+    <div>
+        <label for="amount">Количество билетов</label>
+        <input type="text" id="amount" name="amount" th:field="*{amount}" required="required"/>
+        <p th:if="${#fields.hasErrors('amount')}" class="error">Количество должно быть больше 0</p>
+        <p th:if="${error}" th:text="${error}" class="error"></p>
+    </div>
+    <div class="redir_wrap">
+        <button type="submit">Купить</button>
+    </div>
+</form>
+</body>
+</html>

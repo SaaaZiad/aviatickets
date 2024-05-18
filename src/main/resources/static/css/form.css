@@ -1,0 +1,145 @@
+.form_main{
+    margin-top: 12.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 80vw;
+    padding: 1.75vw 25vw;
+    border: 3px solid white;
+    border-top-left-radius: 60% 100%;
+    border-top-right-radius: 100% 60%;
+    border-bottom-right-radius: 60% 100%;
+    border-bottom-left-radius: 100% 60%;
+    box-shadow:
+            inset 0 0 50px #fff,
+            inset 40px 0 60px violet,
+            inset -40px 0 60px blue,
+            inset 40px 0 300px violet,
+            inset -40px 0 300px blue,
+            0 0 50px #fff,
+            -10px 0 60px violet,
+            10px 0 60px blue;
+}
+.form_main > div > button{
+    background: transparent;
+    padding: 0.5vw 1.5vw;
+    border: 3px solid white;
+    color: white;
+    font-size: 1.75vw;
+    text-transform: uppercase;
+}
+.form_main > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 1.75vw;
+}
+.form_main > div > label{
+    font-size: 1.75vw;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 1vw;
+}
+.form_main > div:first-child > label, .form_main > div:first-child > input {
+    margin-left: -5vw;
+}
+.form_main > .sec_div {
+    margin-right: -5vw;
+}
+.form_main > div:last-child {
+    width: 150%;
+}
+.form_main > div > input{
+    width: 100%;
+    background: transparent;
+    border: 3px solid white;
+    padding: 1vw;
+    outline: none;
+    color: white;
+    font-size: 2vw;
+}
+p.error{
+    color: #773333;
+    background:white;
+    padding: 0.5vw 1.5vw;
+    text-align: center;
+    font-size: 1.5vw;
+    margin-top: 0.5vw;
+    opacity: 0.85;
+}
+.redir_wrap {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    align-items: center;
+}
+.redir_wrap > button {
+    cursor: pointer;
+}
+.form_admin{
+    margin-top: 12.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 80vw;
+    padding: 1.75vw 25vw;
+    border: 3px solid white;
+    border-top-left-radius: 60% 100%;
+    border-top-right-radius: 100% 60%;
+    border-bottom-right-radius: 60% 100%;
+    border-bottom-left-radius: 100% 60%;
+    box-shadow:
+            inset 0 0 50px #fff,
+            inset 40px 0 60px violet,
+            inset -40px 0 60px blue,
+            inset 40px 0 300px violet,
+            inset -40px 0 300px blue,
+            0 0 50px #fff,
+            -10px 0 60px violet,
+            10px 0 60px blue;
+}
+.form_admin > div > button{
+    left: 70vw;
+    top: 25vw;
+    position: absolute;
+    background: transparent;
+    padding: 0.5vw 1.5vw;
+    border: 3px solid white;
+    color: white;
+    font-size: 1.75vw;
+    text-transform: uppercase;
+}
+.form_admin > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 1.75vw;
+}
+.form_admin > div > label{
+    font-size: 1.75vw;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 0.5vw;
+}
+.form_admin > div:first-child > label, .form_admin > div:first-child > input {
+    margin-left: -5vw;
+}
+.form_admin > div:nth-child(2) > label, .form_admin > div:nth-child(2) > input {
+    margin-left: -7vw;
+}
+.form_admin > div:nth-child(4) > label, .form_admin > div:nth-child(4) > input {
+    margin-left: 5vw;
+}
+.form_admin > div > input{
+    width: 100%;
+    background: transparent;
+    border: 3px solid white;
+    padding: 0.5vw;
+    outline: none;
+    color: white;
+    font-size: 1.5vw;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Счет</title>
+    <link href="/static/css/default_styles.css" rel="stylesheet">
+    <link href="/static/css/user.css" rel="stylesheet">
+</head>
+<body>
+    <div th:replace="/header :: header"></div>
+    <div class="popup_wrap">
+        <p th:text="'Текущий баланс аккаунта: ' + ${user.getBalance()} + 'rub'"></p>
+        <a th:href="'/account/top-up/'+${user.getUserId()}">Пополнить счет</a>
+    </div>
+    <div class = "circle_text" style="font-size: 5vw; text-align: center; color: white">
+        <span class="l1">А</span>
+        <span class="l2">В</span>
+        <span class="l3">И</span>
+        <span class="l4">А</span>
+        <span class="l5">З</span>
+        <span class="l6">И</span>
+        <span class="l7">Л</span>
+        <span class="l8">Е</span>
+        <span class="l9">Р</span>
+        <span class="l10">С</span>
+    </div>
+</body>
+</html>

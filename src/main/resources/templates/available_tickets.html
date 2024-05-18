@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Доступные товары</title>
+  <link href="/static/css/default_styles.css" rel="stylesheet">
+  <link href="/static/css/tickets.css" rel="stylesheet">
+</head>
+<body>
+  <div th:replace="/header :: header"></div>
+  <h1>Доступные билеты</h1>
+  <div class="tickets_list">
+    <div th:each="ticket: ${tickets}" class="ticket">
+      <div class="ticket_info">
+        <div th:text="${ticket.getDestination()}" class="ticket_destination"></div>
+        <p th:text="'Подробности:'+${ticket.getDescription()}" class="ticket_description"></p>
+        <p th:text="'Цена:'+${ticket.getPrice()}" class="ticket_price"></p>
+        <p th:text="'Осталось билетов:'+${ticket.getAmount()}" class="ticket_amount"></p>
+        <div class="ticket_buy_redirect">
+          <a th:href="@{/tickets/buy_tickets/{id}(id=${ticket.getTicketId()})}"
+             class="ticket_buy">Купить</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

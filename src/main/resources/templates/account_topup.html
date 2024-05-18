@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пополнение счета</title>
+    <link href="/static/css/default_styles.css" rel="stylesheet">
+    <link href="/static/css/form.css" rel="stylesheet">
+</head>
+<body>
+<div th:replace="/header :: header"></div>
+<p th:text="'Текущий баланс:'+${user.getBalance()}" class="currentAccount"></p>
+<form th:action="@{/account/top-up/{userId}(userId=${user.getUserId()})}" th:object="${topUpAccountDTO}"
+      th:method="post" class="form_main topUpForm">
+    <div>
+        <label for="topUpSum">Сумма пополнения: </label>
+        <input type="text" id="topUpSum" name="topUpSum" th:field="*{topUpSum}" required="required"/>
+        <p th:if="${#fields.hasErrors('topUpSum')}" class="error">Сумма пополнения должна быть положительным целым числом</p>
+    </div>
+    <div class="redir_wrap">
+        <button type="submit">Пополнить</button>
+    </div>
+</form>
+</body>
+</html>

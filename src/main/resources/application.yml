@@ -1,0 +1,32 @@
+spring:
+  web:
+    resources:
+      static-locations: file:src/main/resources/static/
+  application:
+    name: aviatickets
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: "jdbc:postgresql://dpg-cp4gqb0cmk4c73ek6e7g-a:5432/db_084y"
+    hikari:
+      username: example_aviatickets_user
+      password: N0qf267su0r8zLX62ktF4kxZmEdUZkjO
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+    static-path-pattern: /static/**
+  thymeleaf: # Thymeleaf
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+    prefix: file:src/main/resources/templates/
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate.hibernate.format_sql: true
+      hibernate.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: ${PORT}

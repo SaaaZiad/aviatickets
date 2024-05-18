@@ -1,0 +1,42 @@
+.main_page{
+    margin-top: 10vw;
+    width: 100vw;
+    padding: 3.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    height: calc(100vh - 10vw);
+}
+.main_page_wrap > h1{
+    font-size: 4vw;
+}
+.main_page_wrap > p{
+    font-size: 3vw;
+    max-width: 60vw;
+}
+.goToLogin{
+    background: transparent;
+    text-decoration: none;
+    padding: 0.5vw 1.5vw;
+    border: 3px solid white;
+    border-radius: 15px;
+    color: white;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    margin-top: 3vw;
+}
+.main_page_img {
+    max-width: 30vw;
+    margin: 0 2.5vw;
+}
+.main_page_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%
+}

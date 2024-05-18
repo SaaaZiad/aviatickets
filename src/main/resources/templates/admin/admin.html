@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin</title>
+    <link href="/static/css/default_styles.css" rel="stylesheet">
+    <link href="/static/css/admin.css" rel="stylesheet">
+</head>
+<body>
+    <div th:replace="/header :: header"></div>
+    <h1>ПАНЕЛЬ АДМИНИСТРАТОРА</h1>
+    <div class="admin_universal">
+        <a th:href="@{/admin/available_tickets}">Список доступных билетов</a>
+    </div>
+</body>
+</html>

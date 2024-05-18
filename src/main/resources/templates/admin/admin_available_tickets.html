@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/static/css/default_styles.css" rel="stylesheet">
+    <link href="/static/css/admin.css" rel="stylesheet">
+</head>
+<body>
+    <div th:replace="/header :: header"></div>
+    <h1>ПАНЕЛЬ АДМИНИСТРАТОРА</h1>
+    <a th:href="@{/admin/available_tickets/create}" class="create_ticket">Добавить билет</a>
+    <div class="tickets_list">
+        <div class="ticket_inst" th:each="ticket : ${tickets}" >
+            <div class="ticket_info">
+                <div th:text="${ticket.getDestination()}" class="ticket_destination"></div>
+                <p th:text="'Описание:'+${ticket.getDescription()}" class="ticket_description"></p>
+                <p th:text="'Цена за штуку:'+${ticket.getPrice()}" class="ticket_price"></p>
+                <p th:text="'Осталось билетов:'+${ticket.getAmount()}" class="ticket_amount"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

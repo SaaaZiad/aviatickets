@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="/static/css/default_styles.css" rel="stylesheet">
+    <link href="/static/css/form.css" rel="stylesheet">
+    <title>Авторизация</title>
+</head>
+<body>
+<div th:replace="/header :: header"> </div>
+<form th:action="@{/users/perform-authorization}" th:method="post" class="form_main">
+    <div>
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" name="username" th:name="username">
+    </div>
+    <div class="sec_div">
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" th:name="password">
+    </div>
+    <div class="redir_wrap">
+        <button type="submit">Войти</button>
+        <a href="/users/create" class="create_user_redirection">Зарегистрироваться</a>
+    </div>
+</form>
+</body>
+</html>

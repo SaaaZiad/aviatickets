@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin</title>
+    <link href="/static/css/default_styles.css" rel="stylesheet">
+    <link href="/static/css/form.css" rel="stylesheet">
+</head>
+<body>
+<div th:replace="/header :: header"></div>
+</div>
+<form th:action="@{/admin/confirm}" th:object="${confirmAdminDTO}" th:method="post" class="form_main">
+    <div>
+        <label for="confirmKey">Введите ключ администратора</label>
+        <input type="text" id="confirmKey" name="confirmKey" th:field="*{confirmKey}"/>
+        <p th:if="${#fields.hasErrors('confirmKey')}" class="error">Ключ подтверждения не должен быть пустым</p>
+        <p th:if="${errorConfirming}" class="error">Неправильный ключ подтверждения</p>
+    </div>
+    <div class="redir_wrap">
+        <button type="submit">Подтвердить</button>
+    </div>
+</form>
+</body>
+</html>

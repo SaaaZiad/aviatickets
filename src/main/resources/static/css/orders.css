@@ -1,0 +1,45 @@
+.orders{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    padding: 2vw;
+}
+
+.order{
+    margin: 1.75vw 0.75vw 0.75vw 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.75vw;
+    background: white;
+    border: 3px solid black;
+    border-radius: 30px;
+}
+
+.orderInfo{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    font-size: 1.75vw;
+}
+
+.orderInfo > p, .orderInfo> a {
+    margin-top: 1vw;
+}
+
+.orderInfo > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1vw;
+    width: 100%;
+}
+h1{
+    font-size: 3vw;
+    text-transform: uppercase;
+    margin-top: 10vw;
+}

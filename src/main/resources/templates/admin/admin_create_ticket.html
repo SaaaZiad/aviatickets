@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Добавить билет</title>
+    <link href="/static/css/default_styles.css" rel="stylesheet">
+    <link href="/static/css/form.css" rel="stylesheet">
+</head>
+<body>
+<div th:replace="/header :: header"></div>
+<form th:action="@{/admin/available_tickets/create}" th:object="${ticket}" th:method="post"
+      enctype="multipart/form-data" class="form_admin">
+    <div>
+        <label for="description">Пункты отправления - прибытия:</label>
+        <input type="text" id="destination" name="destination" th:field="*{destination}"/>
+        <p th:if="${#fields.hasErrors('description')}" class="error">Пункты отправления - прибытия не должны быть пусты</p>
+    </div>
+    <div>
+        <label for="description">Описание билета:</label>
+        <input type="text" id="description" name="description" th:field="*{description}"/>
+        <p th:if="${#fields.hasErrors('description')}" class="error">Описание не должно быть пустым</p>
+    </div>
+    <div>
+        <label for="price">Цена за билет</label>
+        <input id="price" name="price" th:field="*{price}"/>
+        <p th:if="${#fields.hasErrors('price')}" class="error">Неправильное значение цены</p>
+    </div>
+    <div>
+        <label for="amount">Количество билетов</label>
+        <input id="amount" name="amount" th:field="*{amount}"/>
+        <p th:if="${#fields.hasErrors('amount')}" class="error">Количество должно быть числом</p>
+    </div>
+    <div class="redir_wrap">
+        <button type="submit">Добавить билет</button>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Reddit+Sans+Condensed:wght@200..900&family=Skranji&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
+    <link href="/static/css/index.css" rel="stylesheet">
+    <link href="/static/css/default_styles.css" rel="stylesheet">
+</head>
+<body>
+<div th:replace="/header :: header"></div>
+<div class="main_page">
+    <div class="main_page_wrap">
+        <h1>Авиа<br>Зилерс</h1>
+        <img class="main_page_img" src="/static/imgs/plain.png">
+        <p>Самый надежный сервис по приобретению авиабилетов с многодневной историей!</p>
+    </div>
+    <a href="/users/create" class="goToLogin" sec:authorize="!isAuthenticated()">Присоединяйтесь</a>
+</div>
+</body>
+</html>
