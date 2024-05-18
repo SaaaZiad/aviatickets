@@ -6,9 +6,9 @@ spring:
     name: aviatickets
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: "jdbc:postgresql://dpg-cp4gqb0cmk4c73ek6e7g-a:5432/db_084y"
+    url: "jdbc:postgresql://dpg-cp4gqb0cmk4c73ek6e7g-a:5432"
     hikari:
-      username: example_aviatickets_user
+      username: user
       password: N0qf267su0r8zLX62ktF4kxZmEdUZkjO
   mvc:
     hiddenmethod:
