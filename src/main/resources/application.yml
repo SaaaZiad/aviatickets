@@ -6,16 +6,16 @@ spring:
     name: aviatickets
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: "jdbc:postgresql://dpg-cp4gqb0cmk4c73ek6e7g-a:5432"
+    url: "jdbc:postgresql://dpg-cp4gqb0cmk4c73ek6e7g-a:5432/example-aviatickets"
     hikari:
-      username: user
+      username: example_aviatickets_user
       password: N0qf267su0r8zLX62ktF4kxZmEdUZkjO
   mvc:
     hiddenmethod:
       filter:
         enabled: true
     static-path-pattern: /static/**
-  thymeleaf: # Thymeleaf
+  thymeleaf:
     cache: false
     mode: HTML
     encoding: UTF-8
