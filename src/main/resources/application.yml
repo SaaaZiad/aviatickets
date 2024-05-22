@@ -6,10 +6,10 @@ spring:
     name: aviatickets
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: "jdbc:postgresql://dpg-cp4gqb0cmk4c73ek6e7g-a:5432/example-aviatickets"
+    url: "jdbc:postgresql://dpg-cp6u4vacn0vc73a15n5g-a:5432/aviatickets_01p7"
     hikari:
-      username: example_aviatickets_user
-      password: N0qf267su0r8zLX62ktF4kxZmEdUZkjO
+      username: aviatickets_01p7_user
+      password: srZAUIgXL7mPMkp0K8V07fOd0ZZdk0v9
   mvc:
     hiddenmethod:
       filter:
